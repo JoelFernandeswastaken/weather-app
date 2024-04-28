@@ -8,7 +8,17 @@
 // });
 
 
-var mykey = apiKey.key
+var mykey = apiKey.key;
+
+$('#cityname').keypress((event) => {
+    console.log("event hit");
+    if(event.key == "Enter"){
+        event.preventDefault();
+        $('#search-button').click();
+        console.log("Search button clicked");
+    }
+
+})
 
 
 $('.weather-details').css('display', "none");
